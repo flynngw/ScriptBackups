@@ -1,0 +1,15 @@
+This is not my script, this was created by Microsoft, I take no credit for this.
+
+Requirements:
+For this script to work, CAPICOM 2.0 or later must be installed on the server
+
+If a 32-bit OS, you can run the script like this:
+cscript camonitor.vbs /CACRLOK /CAAlive /CACertOK /KRAOK /smtp /smtpserver:YOURSMTPServer /smtpto:"DestinationEmail@email.com
+
+If an x64 os, then:
+copy "C:\Program Files (x86)\Microsoft CAPICOM 2.1.0.2 SDK\Lib\X86\capicom.dll" c:\windows\syswow64\ /y
+To register the capicom dll: 
+c:\windows\syswow64\regsvr32.exe c:\windows\syswow64\capicom.dll
+
+You can run the script on an x64 system like this:
+C:\Windows\SysWOW64\cscript camonitor.vbs /CACRLOK /CAAlive /CACertOK /KRAOK /smtp /smtpserver:YOURSMTPServer /smtpto:"DestinationEmail@email.com
